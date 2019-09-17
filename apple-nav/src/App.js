@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route } from 'react-router-dom';
 import './App.css';
 import NavWrapper from './components/NavWrapper';
 
@@ -40,9 +40,16 @@ function App() {
   return (
     <div className="container">
       <NavWrapper navTitles={appleNav} />
+      <Route path="/" render={() => {
+          return (
+            <div className="main-body">
+              <h1>Apple Products</h1>
+            </div>
+          )
+        }}
+      />
     </div>
   );
-
 }
 
 export default App;
